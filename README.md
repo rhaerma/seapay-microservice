@@ -1,5 +1,7 @@
  # Seapay
- 
+
+ ## Description
+
 Seapay is a fintech app consists of 4 different services
   - API gateway
     - API gateway service routes all requests to other services
@@ -20,25 +22,44 @@ The project itself has 4 modules
  - seapay-monolith
    - an entry point of our monolithic app, including all handlers
   
- # How to use
-
- ### Dependencies
- ```
- brew cask install java
- ```
+ ## Prerequisites
+  
+In order to build and run this microservices, you need these requirements:
+  
+  1. Java
+  2. PostgreSQL
+  
+ ## Usage
 
  ### How to build
-
+ 
+ 1. Make sure to fulfill the configs on environment variables on `/seapay-domain/src/main/resources/application.yml`
+ 2. Build all microservices with this command
  ```
  make all
  ```
 
  ### How to run
- ```
- make run
- ```
+ To run the services, you can run this script:
 
-  
+1. To run monolith service
+   ```
+   make run-monolith
+   ```
+2. To run gateway service
+   ```
+   make run-gateway
+   ```
 
-
-
+3. To run user service
+   ```
+   make run-user
+   ```
+4. To run wallet service
+   ```
+   make run-wallet
+   ```
+5. To run transaction service
+   ```
+   make run-transaction
+   ```
