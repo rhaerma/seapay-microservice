@@ -26,8 +26,9 @@ The project itself has 4 modules
   
 In order to build and run this microservices, you need these requirements:
   
-  1. Java
+  1. Java, with minimum version 8
   2. PostgreSQL
+  3. Linux/UNIX operating system
   
  ## Usage
 
@@ -35,31 +36,34 @@ In order to build and run this microservices, you need these requirements:
  
  1. Make sure to fulfill the configs on environment variables on `/seapay-domain/src/main/resources/application.yml`
  2. Build all microservices with this command
- ```
- make all
- ```
+     ```
+     make all
+     ```
 
  ### How to run
- To run the services, you can run this script:
+ #### Run monolith program
 
-1. To run monolith service
    ```
    make run-monolith
    ```
-2. To run gateway service
+
+ #### Run microservice
+ To run the services, you can run this script:
+
+1. To run gateway service
    ```
    make run-gateway
    ```
 
-3. To run user service
+2. To run user service
    ```
    make run-user
    ```
-4. To run wallet service
+3. To run wallet service
    ```
    make run-wallet
    ```
-5. To run transaction service
+4. To run transaction service
    ```
    make run-transaction
    ```
